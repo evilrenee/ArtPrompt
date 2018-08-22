@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+@font-face {
+  font-family: "Surf";
+  src: url(fonts/surf.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  color: #231e1f;
+}
+
+body {
+  background-image: url("images/bg.jpg");
+  background-color: #edebe6;
+}
+
+p {
+  font-family: "Inconsolata";
+}
+
+h1 {
+  font-family: "Surf";
+  font-size: 2em;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Surf";
+  font-size: 1.5em;
+  color: white;
+}
+
+h3 {
+  font-family: "Inconsolata";
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #231e1f;
+}
+
+ol {
+  list-style-type: none;
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 870px;
+  padding-top: 20px;
+}
+
+.header-wrapper {
+  float: left;
+  width: 300px;
+}
+
+.body-wrapper {
+  float: left;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.category-wrapper {
+  text-align: center;
+  align-content: center;
+}
+
+#header {
+  background-image: url("images/paintstroke1lg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 570px;
+  width: 300px;
+}
+
+.title {
+  padding-top: 100px;
+  width: 280px;
+  text-align: center;
+}
+
+.title p {
+  padding-top: 15px;
+  margin: 0 auto;
+  width: 200px;
+  color: #dfdee8;
+}
+
+#main-nav {
+  padding-top: 40px;
+  padding-left: 50px;
+  list-style-type: none;
+}
+
+#main-nav li {
+  padding-bottom: 25px;
+}
+
+#main-nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+#prompt-title {
+  background-image: url("images/paintstroke2lg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 220px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#prompt-title h2 {
+  padding-top: 17px;
+}
+
+#category-nav {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#category-nav li {
+  display: inline-block;
+  padding-right: 20px;
+  color: #231e1f;
+}
+
+#roller {
+  margin-top: 25px;
+  border-radius: 20px;
+  width: 100%;
+}
