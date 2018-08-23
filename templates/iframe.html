@@ -1,0 +1,227 @@
+<!DOCTYPE>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Art Prompt</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='roller-styles.css') }}">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id="roller-content">
+
+      <div id="roller-header">
+
+        <div id="roller-category"><h2>{{ category }}</h2></div>
+        <div id="refresher" onclick="refresh()"></div>
+
+      </div>
+
+      <div class="roller-row1">
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>BEING</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for being in beings %}
+                {{ being[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>GENDER</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for gender in genders %}
+                {{ gender[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>AGE</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for age in ages %}
+                {{ age[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>GENRES</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for genre in genres %}
+                {{ genre[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>PHYSIQUE</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for physique in physiques %}
+                {{ physique[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="roller-row2">
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>KEY FEATURE</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for feature in features %}
+                {{ feature[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>KEY TRAIT</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for trait in traits %}
+                {{ trait[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>TIMED</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for time in times %}
+                {{ time[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+        <div class="roller-block">
+
+          <label class="lock-container">
+            <input type="lock-checkbox" checked="checked">
+            <span class="lock-checkmark"></span>
+          </label>
+
+          <label class="container"><p>MEDIUM</p>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <p class="output">
+              {% for medium in mediums %}
+                {{ medium[1] }}
+              {% endfor %}
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script>
+      function refresh() {
+        location.reload();
+      }
+    </script>
+
+
+  </body>
+
+</html>
